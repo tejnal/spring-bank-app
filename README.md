@@ -5,16 +5,16 @@ Spring boot, Spring data jpa, thymeleaf, spring-web, spring-mvc,lombok, mysql, h
 Authentication
 
 ## Features 
-This is a simple customer bank application to perform customer transactions
-Customer Sign Up
-Customer Login
-Add as many as accounts for single customer 
-Perform deposits
-Perform withdrawals
-You can’t withdrawal money from an account that doesn’t have enough money
-You can check the balance of a given account
-Check the history of transactions
-It supports both in memory DB and mysql
+-> This is a simple customer bank application to perform customer transactions
+-> Customer Sign Up
+-> Customer Login
+-> Add as many as accounts for single customer 
+-> Perform deposits
+-> Perform withdrawals
+-> You can’t withdrawal money from an account that doesn’t have enough money
+-> You can check the balance of a given account
+-> Check the history of transactions
+-> It supports both in memory DB and mysql
 
 ## How to run the application ?
 
