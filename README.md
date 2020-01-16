@@ -25,14 +25,14 @@ Hibernate , jdbc, embedded tomcat, sql etc..
 
 ## Step1: Add the configuration details in application property files 
  -> Add mysql database connection details
-        How to install mysql and create schema on mac
+        1)How to install mysql and create schema on mac
         https://www.youtube.com/watch?v=xX9W5dmEpO0
-        Run the below command from terminal 
-        mysql.server start 
-        Mysql  -u root -p 
-        enter password for mysql admin 
-        Create a schema name : customer-banking-app
-        Run the app from terminal  : spring-boot:run
+        2)Run the below command from terminal 
+        3)mysql.server start 
+        4) Mysql  -u root -p 
+        5)enter password for mysql admin 
+        6)Create a schema name : customer-banking-app
+        7)Run the app from terminal  : spring-boot:run
         
  -> Add h2 database connection details
         this in memory database and test data will be volatile on every deplyment run we need to pump data in to tables along with application deployment. 
