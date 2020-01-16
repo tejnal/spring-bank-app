@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<table class="table table-striped text-center" th:fragment="customer-accounts-table">
+    <thead th:if="${!#lists.isEmpty(currentCustomerAccounts)}">
+    <tr>
+        <th class="text-center"> Account Number</th>
+        <th class="text-center"> Account Balance</th>
+        <th class="text-center">Currency</th>
+    </tr>
+    </thead>
+    <tbody>
+    <span th:if="${#lists.isEmpty(currentCustomerAccounts)}" >No accounts for this customer</span>
+    <tr th:each="customerAccount: ${currentCustomerAccounts}">
+        <td th:text="${customerAccount.id}" />
+        <td><strong th:text="${customerAccount.customerAccountBalance}"></strong></td>
+        <td class="text-success"><strong th:text="${customerAccount.currency}"></strong></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

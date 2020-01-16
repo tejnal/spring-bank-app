@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="deposits-table">
+    <table class="table table-striped text-center">
+        <thead th:if="${!#lists.isEmpty(depositsList)}">
+
+        <tr>
+            <th class="text-center">Amount</th>
+            <th class="text-center">Currency</th>
+        </tr>
+        </thead>
+        <tbody>
+        <span th:if="${#lists.isEmpty(depositsList)}" >You have no deposits</span>
+        <tr th:each="deposits: ${depositsList}">
+            <td><strong th:text="${deposits.amount}"></strong></td>
+            <td class="text-success"><strong th:text="${deposits.currency}"></strong></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

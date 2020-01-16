@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header"></head>
+
+<body>
+<nav th:replace="fragments/after-login :: after-login"></nav>
+
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">Kindred Banking App</h1>
+            <p class="lead">Manage your accounts, balances and transactions easily!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title"><strong>Customer Deposit Transactions</strong></h3></div>
+                <div class="panel-body">
+                    <div th:replace="fragments/customer-deposit-transactions-table :: customer-deposit-transactions-table"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript -->
+<span th:replace="fragments/footer :: footer"></span>
+
+</body>
+
+</html>

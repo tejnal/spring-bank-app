@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="customer-deposit-transactions-table">
+    <div th:if="${maxDepositLimitError}">
+        <div class="alert alert-danger">
+            You have reached maximum deposit limit
+        </div>
+    </div>
+
+    <div th:if="${successfulTransaction}">
+        <div class="alert alert-success">
+            The transaction was successful
+        </div>
+
+    </div>
+    <table class="table table-striped text-center" >
+        <thead th:if="${!#lists.isEmpty(currentCustomerAccounts)}">
+        <tr>
+            <th class="text-center"> Account Number </th>
+            <th class="text-center"> Account Balance </th>
+            <th class="text-center"> Currency </th>
+            <th class="text-center"> Transactions</th>
+        </tr>
+        </thead>
+        </tbody>
+        <span th:if="${#lists.isEmpty(currentCustomerAccounts)}" > You have no accounts registered</span>
+        <tr th:each="customerAccount: ${currentCustomerAccounts}">
+            <td th:text="${customerAccount.id}" />
+            <td><strong th:text="${customerAccount.customerAccountBalance}"></strong></td>
+            <td class="text-success"><strong th:text="${customerAccount.currency}"></strong></td>
+            <td><a th:href="@{/deposits/account/{id} (id=${customerAccount.id})}" class="btn btn-primary btn-sm" role="button">View Transactions</a></td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+
+</html>

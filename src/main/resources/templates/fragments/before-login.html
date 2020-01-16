@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<nav class="navbar navbar-inverse" th:fragment="before-login">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">TN BankApp.</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Customer Accounts</a></li>
+            <li><a href="/withdrawal/transactions">Withdrawals</a></li>
+            <li><a href="/deposit/transactions">Deposits</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Bootstrap core JavaScript -->
+<script src="jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="withdrawal-table">
+    <table class="table table-striped text-center">
+        <thead th:if="${!#lists.isEmpty(withdrawalsList)}">
+        <tr>
+            <th class="text-center">Receiver IBAN</th>
+            <th class="text-center">Purpose</th>
+            <th class="text-center">Total Withdrawal Sum</th>
+        </tr>
+        </thead>
+        <tbody>
+        <span th:if="${#lists.isEmpty(withdrawalsList)}" >You have no withdrawals</span>
+        <tr th:each="withdrawals: ${withdrawalsList}">
+            <td th:text="${withdrawals.iban}" />
+            <td th:text="${withdrawals.purpose}" />
+            <td class="text-success"><strong th:text="${withdrawals.totalBalanceSum}"></strong></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header"></head>
+
+<body>
+<nav th:replace="fragments/after-login :: after-login"></nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">Kindred Banking App </h1>
+            <p class="lead">Manage your accounts, balances and transactions easily!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title"><strong>Customer Accounts</strong></h3></div>
+                <div class="panel-body">
+                    <table th:replace="fragments/customer-accounts-table :: customer-accounts-table "></table>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addCustomerAccount">
+                        <span class="glyphicon glyphicon-credit-card"></span> Add Account </button>
+                    <div th:replace="fragments/add-customer-account-modal :: add-customer-account-modal"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<span th:replace="fragments/footer :: footer"></span>
+
+</body>
+
+</html>
